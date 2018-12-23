@@ -1,0 +1,23 @@
+<!doctype html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Font-Awesome-4.7/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+    
+    <title>Request a Feature</title>
+
+</head>
+<div class='page'>
+    <div class=metanav> 
+    </div>
+    {% for message in get_flashed_messages() %}
+            <div class=flash>{{ message }}</div>
+    {% endfor %}
+    {% block body %}{% endblock %}
+    
+</div>

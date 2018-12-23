@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block body %} 
+    <div class="body-div">
+            <div class="col-md-12 content left" align="left">
+                    <h2>Client one</h2>
+                    {% for feature in client_features[0] %}
+                        <div class="feature-list">
+                            <h3 class="feature-header">{{feature["title"]}}</h3>
+                            <p>Priority    :{{feature["client_priority"]}}</p>
+                            
+                            <p>{{feature["description"]}}</p>  
+                            <p> Expires on {{feature["target_date"]}}</p> 
+                            <p>Product Area  :{{feature["product_area"]}}</p>               
+                        </div>
+                    {% else %} 
+                        <li><em>No entries here so far</em></li>
+                    {% endfor %}
+                    
+                    <h2>Client two</h2>
+                    {% for feature in client_features[1] %}
+                        <div class="feature-list">
+                            <h3 class="feature-header">{{feature["title"]}}</h3>
+                            <p>Priority    :{{feature["client_priority"]}}</p>
+                            
+                            <p>{{feature["description"]}}</p>  
+                            <p> Expires on {{feature["target_date"]}}</p> 
+                            <p>Product Area  :{{feature["product_area"]}}</p>               
+                        </div>
+                    {% else %} 
+                        <li><em>No entries here so far</em></li>
+                    {% endfor %}
+                    
+                    <h2>Client three</h2>
+                    {% for feature in client_features[2] %}
+                    <div class="feature-list">
+                            <h3 class="feature-header">{{feature["title"]}}</h3>
+                            <p>Priority    :{{feature["client_priority"]}}</p>
+                            
+                            <p>{{feature["description"]}}</p>  
+                            <p> Expires on {{feature["target_date"]}}</p> 
+                            <p>Product Area  :{{feature["product_area"]}}</p>               
+                        </div>
+                    {% else %} 
+                        <li><em>No entries here so far</em></li>
+                    {% endfor %}
+                </div>
+                
+                <div class="col-md-12 content padding tm-equal-col-container rigth content" align="rigth">
+                    <form action="{{ url_for('add_feature') }}" method=post class="add-entry">
+                        <dl>
+                            <dt>Title:
+                                <dd><input type=text size=30 name="title">
+                            <dt> Client priority:
+                                <dd><input type=number size=1 name="client_priority">
+                            <dt>Text:
+                                <dd><textarea name="description" rows=2 cols=40></textarea>
+                            </dl>
+                            <select name="client">
+                                <option>Client A</option>
+                                <option>Client B</option>
+                                <option>Client C</option>
+                            </select>
+                            
+                            <select name="product_area">
+                                <option>Policies</option>
+                                <option>Billing</option>
+                                <option>Claims</option>
+                                <option>Reports</option>
+                            </select>
+                            <br>
+                            <input type="date" name="date">
+
+                            <dd><input type="submit" value="Request for a feature">
+                    </form>
+                </div>
+    </div>
+    
+{% endblock %}

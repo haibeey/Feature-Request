@@ -1,0 +1,119 @@
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+}
+
+body{
+    margin:50px;
+    background: url("/static/images/s.jpg");
+    background-repeat:repeat-y;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight:300;
+}   
+
+.feature-list{
+    background-color:whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 70%;
+    height: fit-content;
+    padding-left: 5%;
+    border-radius: 5px; 
+    padding: 2px 16px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.feature-list:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+input[type=button], input[type=submit]{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input{
+    margin-top: 20px;
+}
+h2{
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+select {
+  width: 50%;
+  padding: 16px 20px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+textarea {
+  width: 80%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.body-div{
+    display: flex;
+    width: 100%;
+    align-content: center;
+}
+.tm-box-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+p{
+    align:center;
+}
+#home {
+    padding-top: 5.5em;
+}
+.content {
+    background-color: #fff;
+}
+
+@media only screen and (max-width :500px){
+
+    .rigth{
+        display: none;
+    }
+
+    .feature-list{
+        margin-left: 10%;
+    }
+}
+
+form{
+    margin-top: 40px;
+    display: block;
+}
+.content-item {
+    padding-right: 5%;
+    padding-left: 5%;
+    min-height:570px !important;
+}
